@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Install packages
-    packages:
+    package:
       name: "{{ item }}"
       state: present
     loop: "{{ packages }}"
