@@ -1,0 +1,10 @@
+- name: Setup
+  hosts: all
+  become: no
+  tasks:
+  - name: Setup hosts
+    setup:
+    register: system_var
+
+  - debug:
+      var: system_var
